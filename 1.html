@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Я студент ВШЭ</title>
+    <style>
+        /* Базовые стили для наглядности (необязательно, но полезно) */
+        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        header, nav, main, article, section, footer { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: #0077cc; font-weight: bold; }
+        img { max-width: 100%; height: auto; border-radius: 5px; }
+        .highlight { background-color: #ffeb3b; font-weight: bold; }
+        footer { text-align: center; font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <h1>Я — студент ВШЭ</h1>
+        <p>Мой путь в <span class="highlight">Высшей школе экономики</span></p>
+    </header>
+
+    <!-- Навигация (связь со 2-й страницей) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="contact.html">Обратная связь</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основное содержимое -->
+    <main>
+
+        <!-- Статья с графической и текстовой информацией -->
+        <article>
+            <h2>Мой первый год на ФКН</h2>
+
+            <!-- Графическая информация -->
+            <section>
+                <h3>Корпус на Покровке</h3>
+                <figure>
+                    <!-- 
+                        ЗАМЕНИТЕ ССЫЛКУ НА РЕАЛЬНУЮ КАРТИНКУ.
+                        Можно использовать ссылку на изображение в интернете или загрузить свою.
+                        Пример: https://www.hse.ru/data/2017/02/20/1167967845/pokrovka_17.jpg (проверьте актуальность)
+                    -->
+                    <img src="https://placehold.co/600x400/0077cc/white?text=Моя+ВШЭ" alt="Фотография корпуса ВШЭ на Покровке">
+                    <figcaption>Здание Факультета компьютерных наук на Покровском бульваре.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Текстовая информация (блочные и строчные теги) -->
+            <section>
+                <h3>Мои первые впечатления</h3>
+                <p>
+                    Поступление в <strong>НИУ ВШЭ</strong> было моей главной целью. Когда я увидел свою фамилию в списках зачисленных, эмоции зашкаливали. Сейчас я учусь на программе "<em>Прикладная математика и информатика</em>".
+                </p>
+                <p>
+                    Здесь очень интенсивное обучение. Каждую неделю мы решаем множество задач по:
+                </p>
+                <!-- Блочный тег <div> со строчными <span> внутри -->
+                <div style="background-color: #e9ecef; padding: 10px; border-radius: 5px;">
+                    <span style="background-color: #cfe2ff; padding: 3px;">Математическому анализу</span>,
+                    <span style="background-color: #d1e7dd; padding: 3px;">Линейной алгебре</span>,
+                    <span style="background-color: #fff3cd; padding: 3px;">Дискретной математике</span> и
+                    <span style="background-color: #f8d7da; padding: 3px;">Программированию на Python</span>.
+                </div>
+                <p>
+                    Но, несмотря на сложности, мне очень нравится атмосфера <strong>научного поиска</strong> и постоянного развития. ВШЭ — это не просто университет, это <em>новый мир</em>.
+                </p>
+            </section>
+        </article>
+
+        <!-- Дополнительная секция для демонстрации семантики -->
+        <section>
+            <h2>Почему ВШЭ?</h2>
+            <ul>
+                <li><strong>Сильный преподавательский состав</strong> — многие читают курсы из ведущих мировых университетов.</li>
+                <li><strong>Возможности для стажировок</strong> — партнерство с крупнейшими IT-компаниями.</li>
+                <li><strong>Активная студенческая жизнь</strong> — от киберспорта до КВН.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2024 Я - студент ВШЭ. Все права защищены.</p>
+        <p>Мой университет: <a href="https://www.hse.ru" target="_blank">Официальный сайт НИУ ВШЭ</a></p>
+    </footer>
+
+</body>
+</html>

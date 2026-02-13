@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - Я студент ВШЭ</title>
+    <style>
+        /* Базовые стили для наглядности (можно скопировать с главной или сделать свои) */
+        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        header, nav, main, section, form, footer { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: #0077cc; font-weight: bold; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        input[type="radio"], input[type="checkbox"] { margin-right: 5px; margin-left: 0; }
+        .radio-group, .checkbox-group { margin: 10px 0; }
+        .radio-group label, .checkbox-group label { display: inline; font-weight: normal; margin-right: 15px; }
+        button { background-color: #0077cc; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 15px; }
+        button:hover { background-color: #005fa3; }
+        footer { text-align: center; font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Обратная связь</h1>
+        <p>Расскажите мне о своём опыте в ВШЭ или задайте вопрос</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="contact.html">Обратная связь</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Форма для связи</h2>
+            <p>Если вы тоже студент ВШЭ или абитуриент, заполните форму ниже. Я обязательно отвечу!</p>
+
+            <!-- Форма обратной связи -->
+            <form action="#" method="post">
+                <!-- Текстовое поле (Имя) -->
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+
+                <!-- Поле для email -->
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" placeholder="ivanov@example.com" required>
+
+                <!-- Выпадающий список (Статус) -->
+                <label for="status">Ваш статус:</label>
+                <select id="status" name="status">
+                    <option value="student">Студент ВШЭ</option>
+                    <option value="applicant">Абитуриент</option>
+                    <option value="graduate">Выпускник</option>
+                    <option value="other">Другое</option>
+                </select>
+
+                <!-- Радио-кнопки (Выбор факультета) -->
+                <label>Ваш факультет/кампус:</label>
+                <div class="radio-group">
+                    <input type="radio" id="fkn" name="faculty" value="fkn" checked>
+                    <label for="fkn">ФКН</label>
+
+                    <input type="radio" id="economy" name="faculty" value="economy">
+                    <label for="economy">Экономика</label>
+
+                    <input type="radio" id="humanities" name="faculty" value="humanities">
+                    <label for="humanities">Гуманитарные науки</label>
+
+                    <input type="radio" id="other_fac" name="faculty" value="other_fac">
+                    <label for="other_fac">Другой</label>
+                </div>
+
+                <!-- Текстовая область (Многострочное поле) -->
+                <label for="message">Ваше сообщение:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Напишите здесь свои мысли, вопросы или впечатления..." required></textarea>
+
+                <!-- Чекбокс (Согласие на обработку) -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Я согласен на обработку персональных данных</label>
+                </div>
+
+                <!-- Кнопка отправки -->
+                <button type="submit">Отправить сообщение</button>
+            </form>
+            <p><em>* Поскольку это статический HTML, данные формы никуда не отправятся. Для работы нужен серверный язык (например, PHP).</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Я - студент ВШЭ. Все права защищены.</p>
+        <p>Мой университет: <a href="https://www.hse.ru" target="_blank">Официальный сайт НИУ ВШЭ</a></p>
+    </footer>
+
+</body>
+</html>
