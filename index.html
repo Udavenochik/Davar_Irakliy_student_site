@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Я студент ВШЭ</title>
+    <title>Ираклий Давар - студент ВШЭ</title>
     <style>
-        /* Базовые стили для наглядности (необязательно, но полезно) */
-        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        header, nav, main, article, section, footer { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: #0077cc; font-weight: bold; }
-        img { max-width: 100%; height: auto; border-radius: 5px; }
-        .highlight { background-color: #ffeb3b; font-weight: bold; }
-        footer { text-align: center; font-size: 0.9em; color: #666; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f2f5; }
+        header, nav, main, article, section, footer { margin-bottom: 20px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #1e3a8a; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        img { max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #e0e0e0; }
+        .badge { background-color: #1e3a8a; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin: 2px; }
+        footer { text-align: center; color: #666; }
+        h1, h2, h3 { color: #1e3a8a; }
     </style>
 </head>
 <body>
 
-    <!-- Шапка сайта -->
     <header>
         <h1>Я — студент ВШЭ</h1>
-        <p>Мой путь в <span class="highlight">Высшей школе экономики</span></p>
+        <p><strong>Давар Ираклий Акакиевич</strong> | 4-й курс | Прикладная математика | МИЭМ ВШЭ</p>
     </header>
 
-    <!-- Навигация (связь со 2-й страницей) -->
     <nav>
         <ul>
             <li><a href="index.html">Главная</a></li>
@@ -31,64 +30,47 @@
         </ul>
     </nav>
 
-    <!-- Основное содержимое -->
     <main>
-
-        <!-- Статья с графической и текстовой информацией -->
         <article>
-            <h2>Мой первый год на ФКН</h2>
+            <h2>Мой путь в Вышке</h2>
 
-            <!-- Графическая информация -->
             <section>
-                <h3>Корпус на Покровке</h3>
+                <h3>Мой институт - МИЭМ</h3>
                 <figure>
-                    <!-- 
-                        ЗАМЕНИТЕ ССЫЛКУ НА РЕАЛЬНУЮ КАРТИНКУ.
-                        Можно использовать ссылку на изображение в интернете или загрузить свою.
-                        Пример: https://www.hse.ru/data/2017/02/20/1167967845/pokrovka_17.jpg (проверьте актуальность)
-                    -->
-                    <img src="https://placehold.co/600x400/0077cc/white?text=Моя+ВШЭ" alt="Фотография корпуса ВШЭ на Покровке">
-                    <figcaption>Здание Факультета компьютерных наук на Покровском бульваре.</figcaption>
+                    <img src="https://placehold.co/800x400/1e3a8a/white?text=МИЭМ+ВШЭ+на+Покровке" alt="Здание МИЭМ ВШЭ">
+                    <figcaption>Московский институт электроники и математики им. А.Н. Тихонова</figcaption>
                 </figure>
             </section>
 
-            <!-- Текстовая информация (блочные и строчные теги) -->
             <section>
-                <h3>Мои первые впечатления</h3>
-                <p>
-                    Поступление в <strong>НИУ ВШЭ</strong> было моей главной целью. Когда я увидел свою фамилию в списках зачисленных, эмоции зашкаливали. Сейчас я учусь на программе "<em>Прикладная математика и информатика</em>".
-                </p>
-                <p>
-                    Здесь очень интенсивное обучение. Каждую неделю мы решаем множество задач по:
-                </p>
-                <!-- Блочный тег <div> со строчными <span> внутри -->
-                <div style="background-color: #e9ecef; padding: 10px; border-radius: 5px;">
-                    <span style="background-color: #cfe2ff; padding: 3px;">Математическому анализу</span>,
-                    <span style="background-color: #d1e7dd; padding: 3px;">Линейной алгебре</span>,
-                    <span style="background-color: #fff3cd; padding: 3px;">Дискретной математике</span> и
-                    <span style="background-color: #f8d7da; padding: 3px;">Программированию на Python</span>.
+                <h3>Обо мне</h3>
+                <p>Меня зовут <strong>Ираклий Давар</strong>. Я студент <strong>4-го курса МИЭМ ВШЭ</strong> по направлению <em>"Прикладная математика"</em>. Учеба в Вышке — это вызов и большие возможности.</p>
+                
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <span class="badge">Математика</span>
+                    <span class="badge">Программирование</span>
+                    <span class="badge">Анализ данных</span>
+                    <span class="badge">ML</span>
                 </div>
-                <p>
-                    Но, несмотря на сложности, мне очень нравится атмосфера <strong>научного поиска</strong> и постоянного развития. ВШЭ — это не просто университет, это <em>новый мир</em>.
-                </p>
+
+                <p>За 4 года я изучил: <strong>математический анализ</strong>, <strong>дифференциальные уравнения</strong>, <strong>теорию вероятностей</strong>, <strong>Python</strong>, <strong>C++</strong> и многое другое. Сейчас работаю над дипломом в области <em>машинного обучения</em>.</p>
+            </section>
+
+            <section>
+                <h3>Почему МИЭМ ВШЭ</h3>
+                <ul>
+                    <li><strong>Сильная математическая подготовка</strong> — фундаментальные знания</li>
+                    <li><strong>Современные лаборатории</strong> — робототехника и IoT</li>
+                    <li><strong>Преподаватели-практики</strong> — эксперты из Яндекса и Сбера</li>
+                    <li><strong>Стажировки</strong> — партнерство с IT-компаниями</li>
+                </ul>
             </section>
         </article>
-
-        <!-- Дополнительная секция для демонстрации семантики -->
-        <section>
-            <h2>Почему ВШЭ?</h2>
-            <ul>
-                <li><strong>Сильный преподавательский состав</strong> — многие читают курсы из ведущих мировых университетов.</li>
-                <li><strong>Возможности для стажировок</strong> — партнерство с крупнейшими IT-компаниями.</li>
-                <li><strong>Активная студенческая жизнь</strong> — от киберспорта до КВН.</li>
-            </ul>
-        </section>
     </main>
 
-    <!-- Подвал -->
     <footer>
-        <p>© 2024 Я - студент ВШЭ. Все права защищены.</p>
-        <p>Мой университет: <a href="https://www.hse.ru" target="_blank">Официальный сайт НИУ ВШЭ</a></p>
+        <p>© 2026 Ираклий Давар — студент ВШЭ | МИЭМ, 4-й курс</p>
+        <p>НИУ ВШЭ: <a href="https://www.hse.ru" target="_blank">hse.ru</a> | МИЭМ: <a href="https://miem.hse.ru" target="_blank">miem.hse.ru</a></p>
     </footer>
 
 </body>
