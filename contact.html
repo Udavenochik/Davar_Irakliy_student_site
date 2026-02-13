@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обратная связь - Я студент ВШЭ</title>
+    <title>Обратная связь - Ираклий Давар</title>
     <style>
-        /* Базовые стили для наглядности (можно скопировать с главной или сделать свои) */
-        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        header, nav, main, section, form, footer { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: #0077cc; font-weight: bold; }
-        label { display: block; margin-top: 10px; font-weight: bold; }
-        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        input[type="radio"], input[type="checkbox"] { margin-right: 5px; margin-left: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f2f5; }
+        header, nav, main, section, form, footer { margin-bottom: 20px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #1e3a8a; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        label { display: block; margin-top: 15px; font-weight: 600; color: #1e3a8a; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
         .radio-group, .checkbox-group { margin: 10px 0; }
-        .radio-group label, .checkbox-group label { display: inline; font-weight: normal; margin-right: 15px; }
-        button { background-color: #0077cc; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 15px; }
-        button:hover { background-color: #005fa3; }
-        footer { text-align: center; font-size: 0.9em; color: #666; }
+        .radio-group label, .checkbox-group label { display: inline; font-weight: normal; margin-right: 20px; }
+        button { background-color: #1e3a8a; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 20px; }
+        button:hover { background-color: #152c5e; }
+        footer { text-align: center; color: #666; }
+        h1, h2 { color: #1e3a8a; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Обратная связь</h1>
-        <p>Расскажите мне о своём опыте в ВШЭ или задайте вопрос</p>
+        <p><strong>Давар Ираклий Акакиевич</strong> | Студент 4-го курса МИЭМ ВШЭ</p>
     </header>
 
     <nav>
@@ -36,21 +36,17 @@
 
     <main>
         <section>
-            <h2>Форма для связи</h2>
-            <p>Если вы тоже студент ВШЭ или абитуриент, заполните форму ниже. Я обязательно отвечу!</p>
+            <h2>Напишите мне</h2>
+            <p>Если вы тоже учитесь в ВШЭ, хотите задать вопрос или просто пообщаться — заполните форму.</p>
 
-            <!-- Форма обратной связи -->
             <form action="#" method="post">
-                <!-- Текстовое поле (Имя) -->
                 <label for="name">Ваше имя:</label>
-                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                <input type="text" id="name" name="name" placeholder="Иван Петров" required>
 
-                <!-- Поле для email -->
                 <label for="email">Ваш email:</label>
-                <input type="email" id="email" name="email" placeholder="ivanov@example.com" required>
+                <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
 
-                <!-- Выпадающий список (Статус) -->
-                <label for="status">Ваш статус:</label>
+                <label for="status">Вы:</label>
                 <select id="status" name="status">
                     <option value="student">Студент ВШЭ</option>
                     <option value="applicant">Абитуриент</option>
@@ -58,42 +54,34 @@
                     <option value="other">Другое</option>
                 </select>
 
-                <!-- Радио-кнопки (Выбор факультета) -->
-                <label>Ваш факультет/кампус:</label>
+                <label>Факультет:</label>
                 <div class="radio-group">
-                    <input type="radio" id="fkn" name="faculty" value="fkn" checked>
+                    <input type="radio" id="miem" name="faculty" value="miem" checked>
+                    <label for="miem">МИЭМ</label>
+                    <input type="radio" id="fkn" name="faculty" value="fkn">
                     <label for="fkn">ФКН</label>
-
-                    <input type="radio" id="economy" name="faculty" value="economy">
-                    <label for="economy">Экономика</label>
-
-                    <input type="radio" id="humanities" name="faculty" value="humanities">
-                    <label for="humanities">Гуманитарные науки</label>
-
-                    <input type="radio" id="other_fac" name="faculty" value="other_fac">
-                    <label for="other_fac">Другой</label>
+                    <input type="radio" id="economics" name="faculty" value="economics">
+                    <label for="economics">Экономика</label>
+                    <input type="radio" id="other" name="faculty" value="other">
+                    <label for="other">Другой</label>
                 </div>
 
-                <!-- Текстовая область (Многострочное поле) -->
-                <label for="message">Ваше сообщение:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Напишите здесь свои мысли, вопросы или впечатления..." required></textarea>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Напишите что-нибудь..." required></textarea>
 
-                <!-- Чекбокс (Согласие на обработку) -->
                 <div class="checkbox-group">
                     <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Я согласен на обработку персональных данных</label>
+                    <label for="consent">Согласие на обработку данных</label>
                 </div>
 
-                <!-- Кнопка отправки -->
-                <button type="submit">Отправить сообщение</button>
+                <button type="submit">Отправить</button>
             </form>
-            <p><em>* Поскольку это статический HTML, данные формы никуда не отправятся. Для работы нужен серверный язык (например, PHP).</em></p>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Я - студент ВШЭ. Все права защищены.</p>
-        <p>Мой университет: <a href="https://www.hse.ru" target="_blank">Официальный сайт НИУ ВШЭ</a></p>
+        <p>© 2026 Ираклий Давар — студент ВШЭ | МИЭМ, 4-й курс</p>
+        <p>НИУ ВШЭ: <a href="https://www.hse.ru" target="_blank">hse.ru</a> | МИЭМ: <a href="https://miem.hse.ru" target="_blank">miem.hse.ru</a></p>
     </footer>
 
 </body>
