@@ -4,74 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ираклий Давар - студент ВШЭ</title>
+    
+    <!-- Внутренний стиль в теге style -->
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f2f5; }
-        header, nav, main, article, section, footer { margin-bottom: 20px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav ul { list-style: none; padding: 0; display: flex; gap: 30px; }
-        nav a { text-decoration: none; color: #1e3a8a; font-weight: 600; }
-        nav a:hover { text-decoration: underline; }
-        img { max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #e0e0e0; }
-        .badge { background-color: #1e3a8a; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin: 2px; }
-        footer { text-align: center; color: #666; }
-        h1, h2, h3 { color: #1e3a8a; }
+        /* Стили внутри тега style - переопределяют внешний файл */
+        .special-note {
+            background-color: #fef9c3;
+            border: 2px dashed #ca8a04;
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #854d0e;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(202, 138, 4, 0.3);
+        }
+        
+        /* Inline-block для демонстрации позиционирования */
+        .position-demo {
+            position: relative;
+            height: 50px;
+        }
+        
+        .position-demo span {
+            position: absolute;
+            right: 0;
+            background: #1e3a8a;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
     </style>
+    
+    <!-- Подключение внешнего CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="page-wrapper">
+        
+        <header class="main-header">
+            <h1>Я — студент ВШЭ</h1>
+            <p class="student-name"><strong>Давар Ираклий Акакиевич</strong> | 4-й курс | Прикладная математика | МИЭМ ВШЭ</p>
+            <!-- Inline стили (атрибут style) -->
+            <p style="color: #666; font-size: 0.9rem; margin-top: 15px; border-top: 1px solid #eee; padding-top: 15px;">
+                🎓 Московский институт электроники и математики им. А.Н. Тихонова
+            </p>
+        </header>
 
-    <header>
-        <h1>Я — студент ВШЭ</h1>
-        <p><strong>Давар Ираклий Акакиевич</strong> | 4-й курс | Прикладная математика | МИЭМ ВШЭ</p>
-    </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+                <li><a href="https://www.hse.ru" target="_blank">Сайт ВШЭ</a></li>
+                <li><a href="https://miem.hse.ru" target="_blank">Сайт МИЭМ</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="contact.html">Обратная связь</a></li>
-        </ul>
-    </nav>
+        <main>
+            <div class="content-grid">
+                <article class="main-article">
+                    <h2>Мой путь в Вышке</h2>
 
-    <main>
-        <article>
-            <h2>Мой путь в Вышке</h2>
+                    <section>
+                        <h3>Мой институт - МИЭМ</h3>
+                        <figure>
+                            <img src="https://placehold.co/800x400/1e3a8a/white?text=МИЭМ+ВШЭ+на+Покровке" alt="Фото МИЭМ ВШЭ на Покровке">
+                            <figcaption>Московский институт электроники и математики им. А.Н. Тихонова</figcaption>
+                        </figure>
+                    </section>
 
-            <section>
-                <h3>Мой институт - МИЭМ</h3>
-                <figure>
-                    <img src="https://placehold.co/800x400/1e3a8a/white?text=МИЭМ+ВШЭ+на+Покровке" alt="Здание МИЭМ ВШЭ">
-                    <figcaption>Московский институт электроники и математики им. А.Н. Тихонова</figcaption>
-                </figure>
-            </section>
+                    <section>
+                        <h3>Обо мне</h3>
+                        
+                        <!-- Специальный блок с внутренними стилями -->
+                        <div class="special-note">
+                            ⭐ Студент 4-го курса, скоро защита диплома!
+                        </div>
+                        
+                        <p>Меня зовут <strong>Ираклий Давар</strong>. Я студент <strong>4-го курса МИЭМ ВШЭ</strong> по направлению <em>"Прикладная математика"</em>. Учеба в Вышке — это вызов и большие возможности.</p>
+                        
+                        <!-- Бейджи с интересами -->
+                        <div class="badge-container">
+                            <span class="badge">Математика</span>
+                            <span class="badge">Программирование</span>
+                            <span class="badge">Анализ данных</span>
+                            <span class="badge">Машинное обучение</span>
+                            <span class="badge">Python</span>
+                            <span class="badge">C++</span>
+                        </div>
 
-            <section>
-                <h3>Обо мне</h3>
-                <p>Меня зовут <strong>Ираклий Давар</strong>. Я студент <strong>4-го курса МИЭМ ВШЭ</strong> по направлению <em>"Прикладная математика"</em>. Учеба в Вышке — это вызов и большие возможности.</p>
+                        <div class="student-stats">
+                            <h4 style="margin-top: 0; color: #1e3a8a;">📊 Моя статистика</h4>
+                            <ul class="feature-list">
+                                <li><strong>Средний балл:</strong> 8.5/10</li>
+                                <li><strong>Научные работы:</strong> 3 публикации</li>
+                                <li><strong>Языки программирования:</strong> Python, C++, JavaScript</li>
+                                <li><strong>Проекты:</strong> 5 учебных проектов, 2 хакатона</li>
+                            </ul>
+                        </div>
+
+                        <p>За 4 года я изучил: <span class="text-highlight">математический анализ</span>, <span class="text-highlight">дифференциальные уравнения</span>, <span class="text-highlight">теорию вероятностей</span> и многое другое. Сейчас работаю над дипломом в области машинного обучения.</p>
+                        
+                        <!-- Демонстрация позиционирования -->
+                        <div class="position-demo">
+                            <span>📍 Москва, Покровка</span>
+                        </div>
+                    </section>
+                </article>
+
+                <aside class="sidebar">
+                    <h2>Почему ВШЭ?</h2>
+                    
+                    <div class="info-card">
+                        <h3>📚 Академия</h3>
+                        <p>Сильная математическая подготовка и фундаментальные знания от ведущих профессоров</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>💻 Лаборатории</h3>
+                        <p>Современное оборудование в МИЭМ: робототехника, IoT, 3D-печать</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>👨‍🏫 Преподаватели</h3>
+                        <p>Эксперты-практики из Яндекса, Сбера, Лаборатории Касперского</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🚀 Карьера</h3>
+                        <p>Стажировки в IT-компаниях с возможностью трудоустройства</p>
+                    </div>
+                    
+                    <!-- Дополнительная информация с inline-стилями -->
+                    <div style="background: #e0f2fe; padding: 20px; border-radius: 15px; margin-top: 25px;">
+                        <h4 style="color: #0369a1; margin: 0 0 10px 0;">📅 Важные даты</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #bae6fd;">• Защита диплома: Июнь 2026</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #bae6fd;">• Госэкзамены: Май 2026</li>
+                            <li style="padding: 8px 0;">• Выпускной: Июль 2026</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Секция с достижениями -->
+            <section style="background: linear-gradient(145deg, #ffffff, #f5f7ff); padding: 40px; border-radius: 20px; margin: 40px 0;">
+                <h2 style="text-align: center; border: none;">🏆 Мои достижения</h2>
                 
-                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <span class="badge">Математика</span>
-                    <span class="badge">Программирование</span>
-                    <span class="badge">Анализ данных</span>
-                    <span class="badge">ML</span>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; margin-top: 30px;">
+                    <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+                        <div style="font-size: 3rem; color: #1e3a8a;">🥇</div>
+                        <h3>Олимпиада по матанализу</h3>
+                        <p style="color: #666;">1 место, 2025</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+                        <div style="font-size: 3rem; color: #1e3a8a;">📄</div>
+                        <h3>Научная статья</h3>
+                        <p style="color: #666;">Прикладная математика, 2025</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px;">
+                        <div style="font-size: 3rem; color: #1e3a8a;">💼</div>
+                        <h3>Стажировка в Яндексе</h3>
+                        <p style="color: #666;">Лето 2025</p>
+                    </div>
                 </div>
-
-                <p>За 4 года я изучил: <strong>математический анализ</strong>, <strong>дифференциальные уравнения</strong>, <strong>теорию вероятностей</strong>, <strong>Python</strong>, <strong>C++</strong> и многое другое. Сейчас работаю над дипломом в области <em>машинного обучения</em>.</p>
             </section>
+        </main>
 
-            <section>
-                <h3>Почему МИЭМ ВШЭ</h3>
-                <ul>
-                    <li><strong>Сильная математическая подготовка</strong> — фундаментальные знания</li>
-                    <li><strong>Современные лаборатории</strong> — робототехника и IoT</li>
-                    <li><strong>Преподаватели-практики</strong> — эксперты из Яндекса и Сбера</li>
-                    <li><strong>Стажировки</strong> — партнерство с IT-компаниями</li>
-                </ul>
-            </section>
-        </article>
-    </main>
-
-    <footer>
-        <p>© 2026 Ираклий Давар — студент ВШЭ | МИЭМ, 4-й курс</p>
-        <p>НИУ ВШЭ: <a href="https://www.hse.ru" target="_blank">hse.ru</a> | МИЭМ: <a href="https://miem.hse.ru" target="_blank">miem.hse.ru</a></p>
-    </footer>
-
+        <footer id="main-footer">
+            <div>
+                <p>© 2026 Ираклий Давар — студент ВШЭ</p>
+                <p>МИЭМ, 4-й курс, Прикладная математика</p>
+            </div>
+            <div>
+                <p>Контакты:</p>
+                <p>Email: <a href="mailto:idavar@edu.hse.ru">idavar@edu.hse.ru</a></p>
+                <p>TG: <a href="#">@irakli_davar</a></p>
+            </div>
+            <div>
+                <p>НИУ ВШЭ: <a href="https://www.hse.ru" target="_blank">hse.ru</a></p>
+                <p>МИЭМ: <a href="https://miem.hse.ru" target="_blank">miem.hse.ru</a></p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
