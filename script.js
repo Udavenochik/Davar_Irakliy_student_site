@@ -51,14 +51,14 @@ function detectReply(messageText) {
 window.onload = function () {
     const mapContainer = document.getElementById('map');
     if (mapContainer && typeof L !== 'undefined') {
-        const map = L.map('map').setView([55.8039, 37.4022], 17);
+        const map = L.map('map').setView([55.8035, 37.3951], 16);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        L.marker([55.8039, 37.4022])
+        L.marker([55.8035, 37.3951])
             .addTo(map)
             .bindPopup('МИЭМ ВШЭ, Таллинская улица, 34')
             .openPopup();
