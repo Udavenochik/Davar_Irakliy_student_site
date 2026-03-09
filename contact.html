@@ -4,163 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обратная связь - Ираклий Давар</title>
-    
-    <!-- Внутренние стили -->
-    <style>
-        .form-header {
-            background: linear-gradient(145deg, #1e3a8a, #2563eb);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .form-header::after {
-            content: "✉️";
-            position: absolute;
-            right: 20px;
-            bottom: 10px;
-            font-size: 5rem;
-            opacity: 0.1;
-        }
-        
-        .required-note {
-            font-size: 0.9rem;
-            color: #ef4444;
-            margin-top: 5px;
-            display: block;
-        }
-        
-        /* Демонстрация позиционирования */
-        .tooltip-demo {
-            position: relative;
-            display: inline-block;
-            cursor: help;
-            border-bottom: 1px dotted #1e3a8a;
-        }
-        
-        .tooltip-demo:hover .tooltip-text {
-            display: block;
-        }
-        
-        .tooltip-text {
-            display: none;
-            position: absolute;
-            bottom: 150%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1e293b;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            white-space: nowrap;
-            z-index: 10;
-        }
-        
-        .tooltip-text::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #1e293b transparent transparent transparent;
-        }
-    </style>
-    
     <link rel="stylesheet" href="Irakliy.css">
 </head>
 <body>
     <div id="page-wrapper">
-        
         <header class="main-header">
             <h1>Обратная связь</h1>
             <p class="student-name"><strong>Давар Ираклий Акакиевич</strong> | Студент 4-го курса МИЭМ ВШЭ</p>
-            <!-- Inline стили -->
-            <p style="font-size: 0.95rem; color: #4b5563; max-width: 600px; margin: 15px auto 0;">
-                Буду рад пообщаться с другими студентами, абитуриентами и всеми, кто интересуется ВШЭ!
-            </p>
         </header>
 
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="contact.html">Обратная связь</a></li>
-                <li><a href="https://t.me/hse_live" target="_blank">Чат ВШЭ</a></li>
-                <li><a href="https://t.me/miem_hse" target="_blank">Чат МИЭМ</a></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/contact">Обратная связь</a></li>
+                <li><a href="/submissions">Заявки</a></li>
+                <li><a href="https://www.hse.ru" target="_blank">Сайт ВШЭ</a></li>
             </ul>
         </nav>
 
         <main>
-            <div class="form-header">
-                <h2 style="color: white; border: none; margin: 0;">📬 Напишите мне</h2>
-                <p style="margin-top: 10px;">Заполните форму, и я обязательно отвечу в ближайшее время</p>
-            </div>
+            <section class="main-article" style="max-width: 760px; margin: 0 auto;">
+                <h2>📬 Напишите мне</h2>
+                <p style="margin-bottom: 20px;">Данные из формы сохраняются в MongoDB и отображаются на странице заявок.</p>
 
-            <section style="display: flex; justify-content: center;">
-                <form id="contact-form" action="#" method="post">
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-                        <div>
-                            <label for="surname">Фамилия <span style="color: #ef4444;">*</span></label>
-                            <input type="text" id="surname" name="surname" placeholder="Давар" required>
-                        </div>
-                        
-                        <div>
-                            <label for="name">Имя <span style="color: #ef4444;">*</span></label>
-                            <input type="text" id="name" name="name" placeholder="Ираклий" required>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label for="patronymic">Отчество</label>
-                        <input type="text" id="patronymic" name="patronymic" placeholder="Акакиевич">
-                        <span class="required-note">можно не заполнять</span>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label for="email">Email <span style="color: #ef4444;">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="idavar@edu.hse.ru" required>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label for="status">Ваш статус <span style="color: #ef4444;">*</span></label>
-                        <select id="status" name="status" required>
-                            <option value="">Выберите статус</option>
-                            <option value="student">Студент ВШЭ</option>
-                            <option value="applicant">Абитуриент</option>
-                            <option value="graduate">Выпускник</option>
-                            <option value="teacher">Преподаватель</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label>Ваш факультет/кампус</label>
-                        <div class="radio-group">
-                            <input type="radio" id="miem" name="faculty" value="МИЭМ" checked>
-                            <label for="miem">МИЭМ</label>
-                            
-                            <input type="radio" id="fkn" name="faculty" value="ФКН">
-                            <label for="fkn">ФКН</label>
-                            
-                            <input type="radio" id="economics" name="faculty" value="Экономика">
-                            <label for="economics">Экономика</label>
-                            
-                            <input type="radio" id="humanities" name="faculty" value="Гуманитарный">
-                            <label for="humanities">Гуманитарный</label>
-                            
-                            <input type="radio" id="other_fac" name="faculty" value="Другой">
-                            <label for="other_fac">Другой</label>
-                        </div>
-                    </
+                <form id="contact-form" action="/contact" method="post">
+                    <label for="surname">Фамилия *</label>
+                    <input type="text" id="surname" name="surname" required>
+
+                    <label for="name">Имя *</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic" name="patronymic">
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="status">Ваш статус *</label>
+                    <select id="status" name="status" required>
+                        <option value="">Выберите статус</option>
+                        <option value="student">Студент ВШЭ</option>
+                        <option value="applicant">Абитуриент</option>
+                        <option value="graduate">Выпускник</option>
+                        <option value="teacher">Преподаватель</option>
+                        <option value="other">Другое</option>
+                    </select>
+
+                    <label for="faculty">Факультет / кампус</label>
+                    <input type="text" id="faculty" name="faculty" value="МИЭМ">
+
+                    <label for="message">Сообщение *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Напишите ваш вопрос..."></textarea>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
