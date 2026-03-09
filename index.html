@@ -37,7 +37,8 @@
     </style>
     
     <!-- Подключение внешнего CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Irakliy.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
     <div id="page-wrapper">
@@ -171,6 +172,27 @@
                     </div>
                 </div>
             </section>
+
+            <section class="interactive-section">
+                <h2>🗺 Интерактивная карта</h2>
+                <p>На карте отмечено место, где я чаще всего бываю во время учебы — корпус МИЭМ на Покровке.</p>
+                <div id="map" aria-label="Карта с отметкой МИЭМ ВШЭ"></div>
+            </section>
+
+            <section class="interactive-section">
+                <h2>💬 Виртуальный чат со мной</h2>
+                <p>Чат фиктивный: сообщения никуда не отправляются, ответы генерируются на основе ключевых слов.</p>
+                <div class="chat-widget">
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="chat-message bot">Привет! Задай вопрос про учебу в ВШЭ, МИЭМ, проекты или диплом.</div>
+                    </div>
+                    <div class="chat-controls">
+                        <input id="chat-input" type="text" placeholder="Введите сообщение...">
+                        <button id="send-message" type="button">Отправить</button>
+                        <button id="voice-message" type="button">🎤 Голосовое сообщение</button>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer id="main-footer">
@@ -189,5 +211,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
 </body>
 </html>
