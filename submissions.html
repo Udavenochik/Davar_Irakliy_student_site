@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки - Ираклий Давар</title>
+    <link rel="stylesheet" href="Irakliy.css">
+</head>
+<body>
+    <div id="page-wrapper">
+        <header class="main-header">
+            <h1>Полученные заявки</h1>
+            <p class="student-name">Данные из формы обратной связи</p>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/index.html">Главная</a></li>
+                <li><a href="/contact.html">Обратная связь</a></li>
+                <li><a href="/submissions.html">Заявки</a></li>
+                <li><a href="https://www.hse.ru" target="_blank">Сайт ВШЭ</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="main-article">
+                <h2>Список заявок</h2>
+                <div id="submissions-list">
+                    <p>Загрузка данных...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const escapeHtml = (value = '') =>
+            String(value)
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+
+        async function loadSubmissions() {
+            const container = document.getElementById('submissions-list');
+
+            try {
+                const response = await fetch('/api/submissions');
+                if (!response.ok) {
+                    throw new Error('Ошибка загрузки списка заявок');
+                }
+
+                const submissions = await response.json();
+                if (!submissions.length) {
+                    container.innerHTML = '<p>Пока нет заявок. Перейдите в "Обратная связь" и отправьте форму.</p>';
+                    return;
+                }
+
+                container.innerHTML = submissions.map((item) => `
+                    <article class="main-article" style="margin-bottom:20px;">
+                        <h3>${escapeHtml(item.surname)} ${escapeHtml(item.name)} ${escapeHtml(item.patronymic || '')}</h3>
+                        <p><strong>Email:</strong> ${escapeHtml(item.email)}</p>
+                        <p><strong>Телефон:</strong> ${escapeHtml(item.phone || '—')}</p>
+                        <p><strong>Статус:</strong> ${escapeHtml(item.status)}</p>
+                        <p><strong>Факультет:</strong> ${escapeHtml(item.faculty || '—')}</p>
+                        <p><strong>Сообщение:</strong> ${escapeHtml(item.message)}</p>
+                        <p><small>Отправлено: ${new Date(item.createdAt).toLocaleString('ru-RU')}</small></p>
+                    </article>
+                `).join('');
+            } catch (error) {
+                container.innerHTML = `<p style="color:#b91c1c;">${escapeHtml(error.message)}</p>`;
+            }
+        }
+
+        loadSubmissions();
+    </script>
+</body>
+</html>
