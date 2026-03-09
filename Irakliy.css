@@ -506,6 +506,10 @@ input[type="radio"], input[type="checkbox"] {
         display: block;
         margin: 10px 0;
     }
+
+    .chat-controls {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Мобильные устройства */
@@ -580,3 +584,89 @@ input[type="radio"], input[type="checkbox"] {
 .mt-4 { margin-top: 20px; }
 .mb-4 { margin-bottom: 20px; }
 .p-4 { padding: 20px; }
+
+/* ========== ИНТЕРАКТИВНЫЕ БЛОКИ ========== */
+.interactive-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+#map {
+    width: 100%;
+    height: 380px;
+    border-radius: 15px;
+    border: 2px solid #1e3a8a;
+    margin-top: 15px;
+}
+
+.chat-widget {
+    margin-top: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 15px;
+    background: #f8fafc;
+    padding: 15px;
+}
+
+.chat-messages {
+    height: 280px;
+    overflow-y: auto;
+    border-radius: 12px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.chat-message {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.chat-message.user {
+    margin-left: auto;
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.chat-message.bot {
+    margin-right: auto;
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.chat-message audio {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.chat-controls {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+}
+
+.chat-controls input {
+    width: 100%;
+}
+
+.chat-controls button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #1e3a8a;
+    color: white;
+}
+
+.chat-controls button:hover {
+    background: #1d4ed8;
+}
